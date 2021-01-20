@@ -22,25 +22,31 @@ const App = {
     },
     reset() {
       // начать заново
-   
+      this.activeIndex = 0
     },
     nextOfFinish() {
       // кнопка вперед или закончить
       this.activeIndex++     
     },
-    setActive() {
+    setActive(idx) {
       // когда нажимаем на определенный шаг
-
+      this.activeIndex = idx
     }
   },
   computed: {
     // тут стоит определить несколько свойств:
     // 1. текущий выбранный шаг
     currentStep() {
-     
-    }
+
+    },
     // 2. выключена ли кнопка назад
+    disableBackBtn() {
+      
+    },
     // 3. находимся ли мы на последнем шаге
+    lastStep() {
+
+    },
   }
 }
 
