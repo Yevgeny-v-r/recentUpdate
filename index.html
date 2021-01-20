@@ -15,7 +15,7 @@
       <div class="steps">
         <div class="steps-content">
           <!-- Сюда необходимо вывести текст активного шага по его индексу -->
-          {{ currentStep}}
+          {{ currentStepInfo }}
         </div>
         <ul class="steps-list">
           <li 
@@ -30,9 +30,9 @@
 
           <button class="btn primary" @click="nextOfFinish" v-if="!toFinish && activeIndex + 1 < steps.length">Вперед</button>
 
-          <button class="btn" v-if="toFinish" @click="reset">Начать заново</button>
+          <button class="btn" v-show="toFinish" @click="reset">Начать заново</button>
           
-          <button class="btn primary" v-if="lastStep" @click="nextOfFinish">Закончить</button>
+          <button class="btn primary" v-show="lastStep" @click="nextOfFinish">Закончить</button>
         </div>
       </div>
     </div>
